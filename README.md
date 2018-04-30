@@ -8,7 +8,7 @@
 
 DataGeneratorTranslators is a package for automatically creating data generators from specifications such as Backus-Naur Form (BNF), XML Schema Definition (XSD), regular expressions, and Julia Type definitions.  The generators can be run using the [DataGenerators](https://github.com/robertfeldt/DataGenerators.jl)
 
-Note! Going forward this will be the main DataGenerators.jl package repo since my colleague and close collaborator Simon Poulding unfortunately passed away during 2017. We worked on these packages together but I will have to carry the torch forward.
+Note! Going forward this will be the main DataGeneratorTranslators.jl package repo since my colleague and close collaborator Simon Poulding unfortunately passed away during 2017. We worked on these packages together but I will have to carry the torch forward.
 
 ## Installation
 
