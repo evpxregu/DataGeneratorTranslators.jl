@@ -1,24 +1,24 @@
 # DataGeneratorTranslators
 
-[![Build Status](https://travis-ci.org/simonpoulding/DataGeneratorTranslators.jl.svg?branch=master)](https://travis-ci.org/simonpoulding/DataGeneratorTranslators.jl)
+<> [![Build Status](https://travis-ci.org/simonpoulding/DataGeneratorTranslators.jl.svg?branch=master)](https://travis-ci.org/simonpoulding/DataGeneratorTranslators.jl)
 
-[![Coverage Status](https://coveralls.io/repos/simonpoulding/DataGeneratorTranslators.jl/badge.svg?branch=master&service=github)](https://coveralls.io/github/simonpoulding/DataGeneratorTranslators.jl?branch=master)
+<> [![Coverage Status](https://coveralls.io/repos/simonpoulding/DataGeneratorTranslators.jl/badge.svg?branch=master&service=github)](https://coveralls.io/github/simonpoulding/DataGeneratorTranslators.jl?branch=master)
 
-[![codecov.io](http://codecov.io/github/simonpoulding/DataGeneratorTranslators.jl/coverage.svg?branch=master)](http://codecov.io/github/simonpoulding/DataGeneratorTranslators.jl?branch=master)
+<> [![codecov.io](http://codecov.io/github/simonpoulding/DataGeneratorTranslators.jl/coverage.svg?branch=master)](http://codecov.io/github/simonpoulding/DataGeneratorTranslators.jl?branch=master)
 
+DataGeneratorTranslators is a package for automatically creating data generators from specifications such as Backus-Naur Form (BNF), XML Schema Definition (XSD), regular expressions, and Julia Type definitions.  The generators can be run using the [DataGenerators](https://github.com/robertfeldt/DataGenerators.jl)
 
-DataGeneratorTranslators is a package for automatically creating data generators from specifications such as Backus-Naur Form (BNF), XML Schema Definition (XSD), regular expressions, and Julia Type definitions.  The generators can be run using the [DataGenerators](https://github.com/simonpoulding/DataGenerators.jl)
-
+Note! Going forward this will be the main DataGenerators.jl package repo since my colleague and close collaborator Simon Poulding unfortunately passed away during 2017. We worked on these packages together but I will have to carry the torch forward.
 
 ## Installation
 
 Install by cloning the package directly from GitHub from a Julia REPL:
 
-    julia> Pkg.clone("https://github.com/simonpoulding/DataGeneratorTranslators.jl")
+    julia> Pkg.clone("https://github.com/robertfeldt/DataGeneratorTranslators.jl")
 	
 To run the generators created requires the DataGenerators package:
 
-    julia> Pkg.clone("https://github.com/simonpoulding/DataGenerators.jl")
+    julia> Pkg.clone("https://github.com/robertfeldt/DataGenerators.jl")
 
 
 ## Usage 
@@ -92,6 +92,8 @@ But for completeness, a regular expression can be translated into a data generat
 
 
 ### Translator from Julia Type Definition
+
+Note! This translator is not yet updated for Julia 0.6 so is currently inactivated.
 
 Create a data generator for instance of Julia types using this translator.  Both concrete and abstract types are supported as well as parameterised and user-defined types.  The translator identifies potential constructor methods for the types, but calling such methods can give rise to exceptions - these are trapped and returned as `TypeGenerationException`s.
 
