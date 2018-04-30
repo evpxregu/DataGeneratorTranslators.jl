@@ -19,7 +19,7 @@ function include_generator(genname::Symbol, translatefn::Function, translateargs
 end
 
 include(joinpath("regex", "regex.jl"))
-include(joinpath("type", "type.jl"))
+#include(joinpath("type", "type.jl"))
 include(joinpath("bnf", "bnf.jl"))
 include(joinpath("xsd", "xsd.jl"))
 
