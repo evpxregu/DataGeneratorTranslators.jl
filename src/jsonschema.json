@@ -1,0 +1,26 @@
+{
+   "$id":"https://example.com/person.schema.json",
+   "$schema":"http://json-schema.org/draft-07/schema#",
+   "title":"Person",
+   "type":"object",
+   "properties":{
+      "firstName":{
+         "type":"string",
+         "pattern":"[A-Z]{10,200} [A-Z]{10,20}"
+      },
+      "age":{
+         "type":"integer",
+         "minimum":0,
+         "maximum":100
+      },
+      "pet":{
+         "type":"object",
+         "properties":{
+            "name":{
+               "type":"string",
+               "pattern":"[A-B]{4,10}"
+            }
+         }
+      }
+   }
+}

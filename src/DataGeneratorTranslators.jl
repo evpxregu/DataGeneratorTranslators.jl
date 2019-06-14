@@ -1,9 +1,10 @@
 module DataGeneratorTranslators
 
-export regex_generator, type_generator, xsd_generator, bnf_generator
+export regex_generator, type_generator, xsd_generator, bnf_generator,json_generator
 
 using ParserCombinator # BNF parsing
 using LightXML # XSD parsing
+using JSON #JSON scheme parsing
 
 include("parse.jl")
 include("transform.jl")
@@ -18,6 +19,7 @@ function include_generator(genname::Symbol, translatefn::Function, translateargs
 	current_module().eval(genname)
 end
 
+include(joinpath("json", "json.jl"))
 include(joinpath("regex", "regex.jl"))
 #include(joinpath("type", "type.jl"))
 include(joinpath("bnf", "bnf.jl"))
